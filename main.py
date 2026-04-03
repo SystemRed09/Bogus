@@ -7,7 +7,7 @@ from pyperclip import copy
 from PrinterViewModel import PrinterViewModel
 
 SYS_ARGS = argv[2:]
-Dpath =  argv[1] # "/home/parker-kennedy/PycharmProjects/Bogus"
+Dpath =  argv[1]
 
 def helpInfo():
     f = listdir(Dpath)
