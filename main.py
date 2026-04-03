@@ -1,6 +1,6 @@
 from Printer import Printer
 from sys import argv
-from os import listdir
+from os import listdir, name
 from json import loads
 from pyperclip import copy
 

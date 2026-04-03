@@ -1,3 +1,5 @@
+from os import name
+
 from httpx import get, Response
 from enum import Enum
 from subprocess import DEVNULL, STDOUT, call
@@ -18,7 +20,7 @@ class Connection:
         self.response = None
 
         # Ping to ensure no hanging response and secure connection
-        isOn = call(f"ping -W {self.TIMEOUT_TIME} -c 1 {ip4}",
+        isOn = call(f"ping -{'W' if name == "posix" else 'w'} {self.TIMEOUT_TIME} -c 1 {ip4}",
                     shell=True, stdout=DEVNULL, stderr=STDOUT)
         if isOn == 1:
             self.error = ErrorCode.ConnectionError
