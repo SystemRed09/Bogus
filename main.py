@@ -71,7 +71,7 @@ def main(args) -> None:
     if ('-o' in args or "--output" in args) and out is not None:
         output(out)
 
-    input("Press any key to exit.")
+    _ = input("Press any key to exit.")
 
 if __name__ == '__main__':
     main(SYS_ARGS)
