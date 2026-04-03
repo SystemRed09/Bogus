@@ -19,13 +19,13 @@ class Connection:
         self.error = None
         self.response = None
 
-        flag = 'w'
+        flag = 'wc'
         timeout = self.TIMEOUT_TIME
         if name == "posix":
-            flag = 'w'
+            flag = 'Wn'
             timeout *= 1000
         # Ping to ensure no hanging response and secure connection
-        isOn = call(f"ping -{flag} {timeout} -c 1 {ip4}",
+        isOn = call(f"ping -{flag[0]} {timeout} -{flag[1]} 1 {ip4}",
                     shell=True, stdout=DEVNULL, stderr=STDOUT)
         if isOn == 1:
             self.error = ErrorCode.ConnectionError
