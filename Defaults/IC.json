@@ -1,0 +1,11 @@
+{
+  "name": "IC",
+  "printers": [
+    {"ip": "10.130.127.11","name": "IC-HL1_BW_MF"},
+    {"ip": "10.130.127.12","name": "IC-HL1_BW"},
+    {"ip": "10.130.127.13","name": "HL-203-BWWest"},
+    {"ip": "10.130.127.14","name": "HL-203-BWMFWest"},
+    {"ip": "10.130.127.15","name": "HL-201-BWEast"},
+    {"ip": "10.130.127.16","name": "HL-201-BWMFEast"}
+  ]
+}
