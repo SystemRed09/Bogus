@@ -19,10 +19,10 @@ class Connection:
         self.error = None
         self.response = None
 
-        flag = 'wc'
+        flag = 'Wc'
         timeout = self.TIMEOUT_TIME
-        if name == "posix":
-            flag = 'Wn'
+        if name != "posix":
+            flag = 'wn'
             timeout *= 1000
         # Ping to ensure no hanging response and secure connection
         isOn = call(f"ping -{flag[0]} {timeout} -{flag[1]} 1 {ip4}",
